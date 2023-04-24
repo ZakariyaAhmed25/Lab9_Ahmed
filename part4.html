@@ -1,0 +1,22 @@
+<html>
+
+    <head>
+        <h1>PHP Multiplication</h1>
+    </head>
+    
+    <body>
+        <form action="part4.php" method="get">
+            Multiplicationtable: <input type="size" name="size" id = "size" required><br>
+            <input type="submit">
+        </form>
+    
+        <?php
+            if (isset($_GET["size"])) {
+                include("part4.php");
+            }
+        ?>
+    
+    </body>
+    
+    </html>
+    
