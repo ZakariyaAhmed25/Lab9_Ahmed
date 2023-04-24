@@ -1,3 +1,10 @@
-FROM php:7.4-apache
-COPY . /var/www/html/
-EXPOSE 80
+# Set the base image to use
+FROM gcc:latest
+# Copy the C program into the container
+COPY Program1.c .
+COPY inputP1.txt .
+COPY months.txt .
+# Compile the C program
+RUN gcc -o Program1 Program1.c
+# Set the command to run when the container starts
+CMD ["./Program1"]
